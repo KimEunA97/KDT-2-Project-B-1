@@ -14,7 +14,8 @@ export class AppController {
 
   @Get()
   getIndex(@Res() res: Response): void {
-    res.sendFile(join(__dirname, '..', '..', 'frontend/index.html'));
+    // res.sendFile(join(__dirname, '..', '..', 'frontend/index.html'));
+    res.sendFile(join(__dirname, '..', '..', './src/kakaoMap.html'));
   }
 
   @Get('bundle.js')
