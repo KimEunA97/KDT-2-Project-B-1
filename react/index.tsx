@@ -1,8 +1,18 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-
+import { createRoot } from 'react-dom/client';
+//만든 컴포넌트 적용하는 곳
+import KakaoMap from './View/KaKaomap';
 const App = () => {
-  return <h1>Hello World Project-B-1-Team</h1>;
+  return (
+    <>
+      <KakaoMap />
+    </>
+  );
 };
-
-ReactDOM.render(<App />, document.getElementById('root'));
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  const root = createRoot(rootElement);
+  root.render(<App />);
+} else {
+  console.error('Root element not found');
+}
