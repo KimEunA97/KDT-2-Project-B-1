@@ -1,8 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import KakaoMap from './kakaoMap';
 
 const App = () => {
-  return <h1>Hello World Project-B-1-Team</h1>;
+  return <KakaoMap></KakaoMap>;
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
