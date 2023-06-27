@@ -15,7 +15,8 @@ const KakaoMap = () => {
     const fetchUserLocation = async () => {
       try {
         if (navigator.geolocation) {
-          const position: GeolocationPosition = await new Promise<GeolocationPosition>((resolve, reject) => {
+          const position: GeolocationPosition =
+            await new Promise<GeolocationPosition>((resolve, reject) => {
               navigator.geolocation.getCurrentPosition(resolve, reject);
             });
           setState((prev) => ({
@@ -26,14 +27,15 @@ const KakaoMap = () => {
             },
             isLoading: false,
           }));
-        } else {
-          setState((prev) => ({
-            ...prev,
-            errMsg: 'geolocation을 사용할 수 없어요..',
-            isLoading: false,
-          }));
         }
-      } catch (err) {
+        // else {
+        //   setState((prev) => ({
+        //     ...prev,
+        //     errMsg: 'geolocation을 사용할 수 없어요..',
+        //     isLoading: false,
+        //   }));
+        // }
+      } catch (err: any) {
         setState((prev) => ({
           ...prev,
           errMsg: err.message,
