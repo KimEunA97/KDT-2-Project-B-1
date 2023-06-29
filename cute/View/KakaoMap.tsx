@@ -1,6 +1,5 @@
 import React from 'react';
 import {KakaoMapView} from '@jiggag/react-native-kakao-maps';
-
 const App = () => {
   return (
     <KakaoMapView
@@ -19,7 +18,7 @@ const App = () => {
         },
       ]}
       width={400}
-      height={900}
+      height={300}
       centerPoint={{
         lat: 37.59523,
         lng: 127.086,
