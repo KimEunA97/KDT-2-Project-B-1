@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">cute</string>
+    <string name="kakao_app_key">ef3159ccd4dff2e5548e2cf7474bde12</string>
 </resources>
