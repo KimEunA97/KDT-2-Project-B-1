@@ -5,7 +5,7 @@ const App = () => {
   return (
     <KakaoMapView
       markerImageName="customImageName" // 옵션1
-      markerImageUrl="https://github.com/jiggag/react-native-kakao-maps/blob/develop/example/custom_image.png?raw=true" // 옵션2
+      markerImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy8z3aU2kmy1R1yJmvtxghCoWvkidhcU-ZMw&usqp=CAU" // 옵션2
       markerList={[
         {
           lat: 37.59523,
