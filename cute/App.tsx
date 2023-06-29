@@ -5,11 +5,17 @@
  * @format
  */
 
-import React from 'react';
+import React, {View} from 'react-native';
 import KakaoMap from './View/KakaoMap';
+import PathBox from './View/PathBox';
 
 function App(): JSX.Element {
-  return <KakaoMap></KakaoMap>;
+  return (
+    <View>
+      <KakaoMap></KakaoMap>
+      <PathBox></PathBox>
+    </View>
+  );
 }
 
 export default App;
