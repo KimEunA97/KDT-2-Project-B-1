@@ -6,7 +6,7 @@ import Map from './View/map';
 function App(): JSX.Element {
   return (
     <SafeAreaView>
-      <Map></Map>
+      <Map />
     </SafeAreaView>
   );
 }
