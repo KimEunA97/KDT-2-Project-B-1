@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import MapView, {Region} from 'react-native-maps';
+import MapView, {MapMarker, Region} from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 import {check, PERMISSIONS, RESULTS, request} from 'react-native-permissions';
 
@@ -39,8 +39,8 @@ const App = () => {
           setInitialPosition({
             latitude,
             longitude,
-            latitudeDelta: 1,
-            longitudeDelta: 1,
+            latitudeDelta: 0.2,
+            longitudeDelta: 0.2,
           });
         },
         error => {
@@ -59,7 +59,11 @@ const App = () => {
         style={{width: '100%', height: '100%'}}
         initialRegion={initialPosition}
         showsUserLocation={true}
-      />
+      >
+
+        
+      </MapView>
+
     )
   );
 };
