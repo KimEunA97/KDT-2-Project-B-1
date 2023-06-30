@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import MapView, {MapMarker, Region} from 'react-native-maps';
+import MapView, {Marker, Polyline} from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 import {check, PERMISSIONS, RESULTS, request} from 'react-native-permissions';
 
@@ -39,8 +39,8 @@ const App = () => {
           setInitialPosition({
             latitude,
             longitude,
-            latitudeDelta: 0.2,
-            longitudeDelta: 0.2,
+            latitudeDelta: 3,
+            longitudeDelta: 3,
           });
         },
         error => {
@@ -60,8 +60,31 @@ const App = () => {
         initialRegion={initialPosition}
         showsUserLocation={true}
       >
+      <Marker
+          coordinate={{latitude: 36.3492357, longitude: 127.377491}}
+          title="출발"
+          description="그린컴퓨터아트학원"></Marker>
+      <Marker
+          coordinate={{latitude: 35.871686, longitude: 128.5646145}}
+          title="도착"
+          description="오렌지막창"></Marker>
+        <Polyline
+    coordinates={[
+      {latitude: 36.3492357, longitude: 127.377491},
+      {latitude: 35.871686, longitude: 128.5646145},
 
-        
+    ]}
+    strokeColor="#000" // fallback for when `strokeColors` is not supported by the map-provider
+    strokeColors={[
+      '#7F0000',
+      '#00000000', // no color, creates a "long" gradient between the previous and next coordinate
+      '#B24112',
+      '#E5845C',
+      '#238C23',
+      '#7F0000',
+    ]}
+    strokeWidth={6}
+  />
       </MapView>
 
     )
