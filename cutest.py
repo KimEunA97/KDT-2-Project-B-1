@@ -10,6 +10,7 @@ destination = "127.4332,36.3521"
 
 # API endpoint URL
 url = f"https://apis-navi.kakaomobility.com/v1/directions?origin={origin}&destination={destination}"
+# url = f"https://apis-navi.kakaomobility.com/v1/directions?origin={origin}&destination={destination}&priority=RECOMMEND"
 
 # 헤더 정보
 headers = {
