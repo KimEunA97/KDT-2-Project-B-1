@@ -7,6 +7,11 @@ import addLatLngDate, {
 import React, {useState} from 'react';
 import MeongOriModal from './MeongOriModal';
 
+// const GoogleMap = () => {
+//   const latLngDeltaData: latLngDeltaDataType = {
+//     latitudeDelta: 0.1,
+//     longitudeDelta: 0.5,
+//   };
 const GoogleMap = () => {
   const [windowBool, setWindowBool] = useState<boolean>(false);
   const [isMapReady, setIsMapReady] = useState<boolean>(false);
