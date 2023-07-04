@@ -1,12 +1,12 @@
+import React, {useState} from 'react';
 import {Image, View} from 'react-native';
-import React from 'react';
 import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import MetroCoord from '../model/MetropolitanCoordinate.json';
 import addLatLngDate, {
   latLngDeltaDataType,
 } from '../model/mapviewInitialRegionData';
-import React, {useState} from 'react';
 import MeongOriModal from './MeongOriModal';
+import {axiosTest} from '../model/crawling';
 
 const GoogleMap = () => {
   const [windowBool, setWindowBool] = useState<boolean>(false);
@@ -32,6 +32,17 @@ const GoogleMap = () => {
       </View>
     );
   };
+  axiosTest();
+
+  const renderLoading = () => {
+    return (
+      <View style={{flex: 1}}>
+        <Text>Loading Map...</Text>
+      </View>
+    );
+  };
+  axiosTest();
+
   return (
     <>
       {isMapReady ? null : renderLoading()}

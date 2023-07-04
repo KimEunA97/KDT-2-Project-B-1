@@ -9,17 +9,18 @@ export class AppController {
     private readonly kakaoApi: KakaoApiService,
     private readonly appService: AppService,
   ) {}
-  @Post('inputData')
-  async handleInputData(
-    @Body('value') value: string,
-  ): Promise<{ status: string }> {
-    try {
-      await axiosTest();
-      console.log('입력한 input 정보 : ', value);
-      return { status: '정보를 성공적으로 받아왔습니다.' };
-    } catch (error) {
-      console.error('정보를 받아오는데 실패했습니다.', error);
-    }
+
+  @Get()
+  getDirections(): Promise<void> {
+    return this.kakaoApi.getDuration();
+  }
+
+  @Get()
+  async performTask(): Promise<string> {
+    // const url = 'https://api.example.com/data';
+    // const outputPath = './data.json';
+    await this.appService.getHello();
+    return 'Data fetched and saved!';
   }
   @Get()
   getDirections(): Promise<void> {
