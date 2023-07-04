@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
+  constructor(private readonly kakaoApi: KakaoApiService) {}
   constructor(
     private readonly kakaoApi: KakaoApiService,
     private readonly appService: AppService,
@@ -16,6 +17,10 @@ export class AppController {
     } catch (error) {
       console.error('정보를 받아오는데 실패했습니다.', error);
     }
+  }
+  @Get()
+  getDirections(): Promise<void> {
+    return this.kakaoApi.getDuration();
   }
   @Get()
   getDirections(): Promise<void> {
