@@ -9,9 +9,7 @@ export class AppController {
     private readonly appService: AppService,
   ) {}
   @Post('inputData')
-  async handleInputData(
-    @Body('value') value: string,
-  ): Promise<{ status: string }> {
+  handleInputData(@Body('value') value: string): { status: string } {
     try {
       console.log('입력한 input 정보 : ', value);
       return { status: '정보를 성공적으로 받아왔습니다.' };
