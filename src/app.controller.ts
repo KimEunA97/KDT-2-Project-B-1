@@ -1,6 +1,6 @@
 import { Body, Controller, Post, Get } from '@nestjs/common';
 import { KakaoApiService } from './kakao-api/kakao-api.service';
-import { AppService } from './app.service';
+import { AppService } from './app.service'
 
 @Controller()
 export class AppController {
@@ -9,7 +9,9 @@ export class AppController {
     private readonly appService: AppService,
   ) {}
   @Post('inputData')
-  handleInputData(@Body('value') value: string): { status: string } {
+  async handleInputData(
+    @Body('value') value: string,
+  ): Promise<{ status: string }> {
     try {
       console.log('입력한 input 정보 : ', value);
       return { status: '정보를 성공적으로 받아왔습니다.' };
