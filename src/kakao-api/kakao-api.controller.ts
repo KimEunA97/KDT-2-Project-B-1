@@ -5,12 +5,8 @@ import { KakaoApiService } from './kakao-api.service';
 export class KakaoApiController {
   constructor(private readonly kakaoApiService: KakaoApiService) {}
 
-  @Get('Duration')
-  getDirections() {
-    return this.kakaoApiService.getDuration();
+  @Get('Directions')
+  getDirection() {
+    return this.kakaoApiService.getDirections();
   }
-  // @Get('Direction')
-  // getDirection() {
-  //   return this.kakaoApiService.getDirection();
-  // }
 }

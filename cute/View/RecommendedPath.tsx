@@ -10,7 +10,7 @@ const RecommendedPath = () => {
   useEffect(() => {
     const fetchPathData = async () => {
       try {
-        const response = await fetch("http://10.0.2.2:3000/kakao-api/duration");
+        const response = await fetch("http://10.0.2.2:3000/time/duration");
         const data = await response.json();
         const minutes = Math.floor(data.duration / 60); // 분
         const seconds = data.duration % 60; // 초

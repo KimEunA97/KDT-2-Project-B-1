@@ -4,11 +4,11 @@ import { AppService } from './app.service';
 import { KakaoApiService } from './kakao-api/kakao-api.service';
 import { KakaoApiController } from './kakao-api/kakao-api.controller';
 import { AppController } from './app.controller';
-// import { KakaoApiDirection } from './kakao-api/kakao-api-direction.service';
+import { TimeController } from './time/time.controller';
+import { TimeService } from './time/time.service';
 
 @Module({
-  imports: [],
-  controllers: [AppController, KakaoApiController],
-  providers: [AppService, KakaoApiService],
+  controllers: [AppController, KakaoApiController, TimeController],
+  providers: [AppService, KakaoApiService, TimeService],
 })
 export class AppModule {}

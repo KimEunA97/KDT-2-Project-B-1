@@ -1,9 +1,9 @@
+import React, {useState} from 'react';
 import { Image, View, StyleSheet } from 'react-native';
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import MetroCoord from '../model/MetropolitanCoordinate.json';
 import addLatLngDate, { latLngDeltaDataType } from '../model/mapviewInitialRegionData';
 import SelectedPath from './SelectedPath';
-import React from 'react';
 
 const GoogleMap = () => {
   const [windowBool, setWindowBool] = useState<boolean>(false);
@@ -27,7 +27,8 @@ const GoogleMap = () => {
             key={Object.keys(MetroCoord.daejeon)[0]}
             coordinate={MetroCoord.daejeon}
             description={'대전 소보로빵'}
-            onPress={openModal}>
+            // onPress={openModal}
+            >
             <Image
               source={require('../Img/Daejeon_Twigim-soboro-bread.png')}
               style={{ width: 70, height: 70 }}
