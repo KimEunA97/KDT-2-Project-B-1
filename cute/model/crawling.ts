@@ -25,9 +25,9 @@ export const axiosTest = async (local: String, food: String) => {
 
     // 네이버 검색 결과에서 필요 정보부분으로 확인한 해당 부분의 요소로 장소 및 별점을 배열에 담는다.
     $('div.CHC5F').each((index: number, element: CheerioAPI) => {
-      // 장소 이름
+      // 장소 이름 -> 해당 요소 중에 자식을 찾아서 추출
       const place = $(element).find('span.place_bluelink.TYaxT').text();
-      // 해당 지점 별점
+      // 해당 지점 별점 -> 해당 요소 중에 자식을 찾아서 추출
       const star = $(element).find('span.h69bs.a2RFq').text();
 
       // 장소 및 별점으로 배열에 객체형식으로 담기
