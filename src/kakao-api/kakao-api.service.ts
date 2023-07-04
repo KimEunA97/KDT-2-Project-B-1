@@ -19,7 +19,10 @@ export class KakaoApiService {
       const data = response.data; // 응답 데이터
       const duration = data.routes[0].sections[0].duration; //시간
       const distance = data.routes[0].sections[0].distance; //거리
+      const duration = data.routes[0].sections[0].duration; //시간
+      const distance = data.routes[0].sections[0].distance; //거리
       const polyline = [];
+      const sections = data['routes'][0]['sections']; //경로
       const sections = data['routes'][0]['sections']; //경로
       for (const section of sections) {
         const roads = section['roads'];
