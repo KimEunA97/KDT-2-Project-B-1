@@ -29,6 +29,7 @@
       
       <!-- You will also only need to add this uses-libray tag -->
         android:value="AIzaSyCnCXJvaW6e6Nbnfb9ZJ0lZwkYgJwG3oyo"/>
+       
       <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     </application>
 </manifest>
