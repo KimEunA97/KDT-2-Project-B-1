@@ -1,5 +1,5 @@
 import axios from 'axios';
-import cheerio, {CheerioElement, CheerioAPI} from 'react-native-cheerio';
+import cheerio, {CheerioAPI} from 'react-native-cheerio';
 
 //  지역명과 음식명을 받아서 맛집정보를 반환할 예정
 export const axiosTest = async (local: String, food: String) => {
